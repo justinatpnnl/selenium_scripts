@@ -1,0 +1,3 @@
+﻿$action = New-ScheduledTaskAction -Execute 'Powershell.exe' -Argument '-WindowStyle Hidden -File c:\Selenium\cleanup.ps1'
+$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 15)
+Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Selenium Session Cleanup" -Description "Stop orphaned processes for Chrome and Firefox and their drivers" -User "System"
