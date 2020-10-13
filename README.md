@@ -32,7 +32,7 @@ To use Selenium Webdriver Remote, you need the Selenium Standalone Server .jar f
 
 **Selenium Standalone Server**
 
-You can download Selenium Standalone Server from https://www.seleniumhq.org/download/.  The download is in the form of a `.jar` file.  Save this file in a location to reference in your setup script.
+You can download Selenium Standalone Server from https://www.selenium.dev/downloads/.  The download is in the form of a `.jar` file.  Save this file in a location to reference in your setup script.
 
 Example: `c:\selenium\selenium-server-standalone-3.141.59.jar`
 
@@ -115,14 +115,14 @@ Firefox is less picky about the driver version, you will just need a recent vers
 
 **WebDrivers**
 
-The list of available WebDrivers is available at https://www.seleniumhq.org/download/
+The list of available WebDrivers is available at https://www.selenium.dev/downloads/
 
 * You can download the latest ChromeDriver from https://sites.google.com/a/chromium.org/chromedriver/downloads. 
 * You can download the latest GeckoDriver for Firefox from https://github.com/mozilla/geckodriver/releases.  
 
 Save the drivers in a location to reference in your setup script, likely in the same location as the Selenium Standalone Server file.  For clarity, I will usually append the version number to the file name:
 
-Example: `c:\selenium\chromedriver77.exe`
+Example: `c:\selenium\chromedriver86.exe`
 
 
 
@@ -132,8 +132,8 @@ Like the hub, starting the node can be done from the command line.  There are a 
 
 ```
 java.exe
--Dwebdriver.chrome.driver=C:\Selenium\chromedriver77.exe 
--Dwebdriver.gecko.driver=C:\Selenium\geckodriver26.exe 
+-Dwebdriver.chrome.driver=C:\Selenium\chromedriver86.exe 
+-Dwebdriver.gecko.driver=C:\Selenium\geckodriver27.exe 
 -jar c:\selenium\selenium-server-standalone-3.141.59.jar 
 -role node 
 -hub http://<your hub server>:4444/grid/register 
